@@ -247,6 +247,22 @@ section.dark pre {
 
 img.img-fluid {
 	display:inline-block;
+	height: 235px;
+}
+
+/*.logo {
+	
+}*/
+
+.button-callout {
+	background-color: #2355be;
+}
+
+.button-callout:hover{
+	background-color: #267bca;
+}
+.aj{
+	background-color: #a52801;
 }
 
 /* IE & Mozilla fix */
