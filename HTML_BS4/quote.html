@@ -26,7 +26,7 @@
 
 		<!-- PAGE LEVEL SCRIPTS -->
 		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-		<!-- <link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" /> -->
+		
 	</head>
 
 	<!--
@@ -192,51 +192,84 @@
 					<!-- num of apartments -->
 					<div id="numOfApartments" class="col-md-2">
 						<label>Number of apartments</label>
-						<input  value="" class="form-control">
+						<input id="numOfApartmentsInput" value="0" class="" type="number">
 					</div><br>
 					<!-- num of basements -->
-					<div id ="numOfBasements" class= "col-md-2">
-						<label >Number of basements</label>
-						<input  value="" class="form-control">
+					<div id ="numOfBasements" class= "col-md-2"> 
+						<label>Number of basements</label>
+						<input id="numOfBasementsInput" value="0" class="" type="number">
 					</div><br>
 					<!-- num of floors -->
 					<div id="numOfFloors" class="col-md-2">
 						<label>Number of floors</label>
-					    <input  value="" class="form-control">
+					    <input id="numOfFloorsInput" value="0" class="" type="number">
                     </div><br>
 					<!-- number of companies -->
 					<div id="numOfCompanies" class="col-md-2">
 						<label>Number of Companies</label>
-						<input  value="" class="form-control">
+						<input id="numOfCompaniesInput" value="0" class="" type="number">
 					</div><br>
 					<!-- number of parking spots -->
 					<div id="numOfParking" class="col-md-2">
 						<label>Number of parking spots</label>
-						<input  value="" class="form-control">
+						<input id="numOfParkingInput" value="0" class="" type="number">
 					</div><br>
 					<!-- number of elevators -->
 					<div id="numOfElevators" class="col-md-2">
 						<label>Number of elevators</label>
-						<input  value="" class="form-control">
+						<input id="numOfElevatorsInput" value="0" class="" type="number">
 					</div><br>
 					<!-- number of corporations -->
 					<div id="numOfCorporations" class="col-md-2">
 						<label>Number of corporations</label>
-						<input  value="" class="form-control">
+						<input id="numOfCorporationsInput" value="0" class="" type="number">
 					</div><br>
 					<!-- maximum occupancy -->
 					<div id="maxOccupancy" class="col-md-2">
 						<label>Maximum occupancy</label>
-						<input  value="" class="form-control">
+						<input id="maxOccupancyInput" value="0" class="" type="number">
 					</div><br>
 					<!-- business hours -->
-					<div id= "businessHours" class="col-md-2" display="none"> 
+					<div id= "businessHours" class="col-md-2"> 
 						<label>Business hours</label>
-						<input  value="" class="form-control">
+						<input id="businessHoursInput" value="0" class="" type="number">
 					</div>
 					
+					<button id='clickBtn'  class='btn btn-primary'>GET An Estimate</button><br><br>
+
+					<div id="radioButtons">
+						<input id="standard" type="radio" name="productLine" value="standard">
+						<label for="standard">Standard</label>
+
+						<input id="premium" type="radio" name="productLine" value="premium">
+						<label for="premium">Premium</label>
+
+						<input id="excelium" type="radio" name="productLine" value="excelium">
+						<label for="excelium">Excelium</label>
+
+					</div><br><br>
+
+					<div>
+						<label>Elevators Needed</label>
+						<input id="elevatorsNeeded" value="" class="" readonly>
+
+						<label>Elevator Price Per Unit</label>
+						<input id= "elevatorsPricePerUnit" value="" class="" readonly>
+
+						<label>Total Price Of The Elevator</label>
+						<input id= "totalPriceOfTheElevators"value="" class="" readonly>
+
+						<label>Installation Cost</label>
+						<input id= "intsallationCost" value="" class="" readonly>
+
+						<label>Total Project Cost</label>
+						<input id= "totalProjectCost" value="" class="" readonly>
+					</div>
 			
 			</div><br><br><br>
+
+
+
 
 
 
@@ -303,6 +336,7 @@
 
 		</div>
 		<!-- /wrapper -->
+		
 
 
 		<!-- SCROLL TO TOP -->

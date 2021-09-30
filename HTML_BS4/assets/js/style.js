@@ -1,59 +1,129 @@
-document.getElementById("numOfApartments").style.display = "none";
-document.getElementById("numOfBasements").style.display = "none";
-document.getElementById("numOfFloors").style.display = "none";
-document.getElementById("numOfCompanies").style.display = "none";
-document.getElementById("numOfParking").style.display = "none";
-document.getElementById("numOfElevators").style.display = "none";
-document.getElementById("numOfCorporations").style.display = "none";
-document.getElementById("maxOccupancy").style.display = "none";
-document.getElementById("businessHours").style.display = "none";
+let buildingType = document.getElementById("building-type");
+
+let numOfApartments = document.getElementById("numOfApartments");
+let numOfBasements = document.getElementById("numOfBasements");
+let numOfFloors = document.getElementById("numOfFloors");
+let numOfCompanies = document.getElementById("numOfCompanies");
+let numOfParking = document.getElementById("numOfParking");
+let numOfElevators = document.getElementById("numOfElevators");
+let numOfCorporations = document.getElementById("numOfCorporations");
+let maxOccupancy = document.getElementById("maxOccupancy");
+let businessHours = document.getElementById("businessHours");
+
+//use the number inside this. 
+let numOfApartmentsInput = document.getElementById("numOfApartmentsInput");
+let numOfBasementsInput = document.getElementById("numOfBasementsInput");
+let numOfFloorsInput = document.getElementById("numOfFloorsInput");
+let numOfCompaniesInput = document.getElementById("numOfCompaniesInput");
+let numOfParkingInput = document.getElementById("numOfParkingInput");
+let numOfElevatorsInput = document.getElementById("numOfElevatorsInput");
+let numOfCorporationsInput = document.getElementById("numOfCorporationsInput");
+let maxOccupancyInput = document.getElementById("maxOccupancyInput");
+let businessHoursInput = document.getElementById("businessHoursInput");
+//show the number here. 
+let elevatorsNeeded = document.getElementById("elevatorsNeeded");
+let elevatorsPricePerUnit = document.getElementById("elevatorsPricePerUnit");
+let totalPriceOfTheElevators = document.getElementById("totalPriceOfTheElevators");
+let intsallationCost = document.getElementById("intsallationCost");
+let totalProjectCost = document.getElementById("totalProjectCost");
+
+let radioButtons = document.getElementById("radioButtons");
+
+let clickBtn = document.getElementById("clickBtn");
+
+numOfApartments.style.display = "none";
+numOfBasements.style.display = "none";
+numOfFloors.style.display = "none";
+numOfCompanies.style.display = "none";
+numOfParking.style.display = "none";
+numOfElevators.style.display = "none";
+numOfCorporations.style.display = "none";
+maxOccupancy.style.display = "none";
+businessHours.style.display = "none";
 
 function getSelectedValue(){
-    let SelectedValue=document.getElementById("building-type").value;
+    let SelectedValue = buildingType.value;
     console.log(SelectedValue);
-    if (SelectedValue == "residential") {
-        document.getElementById("numOfApartments").style.display = "block";
-        document.getElementById("numOfFloors").style.display = "block";
-        document.getElementById("numOfBasements").style.display = "block";
-        document.getElementById("numOfCompanies").style.display = "none";
-        document.getElementById("numOfParking").style.display = "none";
-        document.getElementById("numOfElevators").style.display = "none";
-        document.getElementById("numOfCorporations").style.display = "none";
-        document.getElementById("maxOccupancy").style.display = "none";
-        document.getElementById("businessHours").style.display = "none";
+    if (SelectedValue == "select") {
+        numOfApartments.style.display = "none";
+        numOfFloors.style.display = "none";
+        numOfBasements.style.display = "none";
+        numOfCompanies.style.display = "none";
+        numOfParking.style.display = "none";
+        numOfElevators.style.display = "none";
+        numOfCorporations.style.display = "none";
+        maxOccupancy.style.display = "none";
+        businessHours.style.display = "none";
+    }
+
+    else if (SelectedValue == "residential") {
+        numOfApartments.style.display = "block";
+        numOfFloors.style.display = "block";
+        numOfBasements.style.display = "block";
+        numOfCompanies.style.display = "none";
+        numOfParking.style.display = "none";
+        numOfElevators.style.display = "none";
+        numOfCorporations.style.display = "none";
+        maxOccupancy.style.display = "none";
+        businessHours.style.display = "none";
     }
     else if (SelectedValue == "commercial") {
-        document.getElementById("numOfFloors").style.display = "block";
-        document.getElementById("numOfBasements").style.display = "block";
-        document.getElementById("numOfCompanies").style.display = "block";
-        document.getElementById("numOfParking").style.display = "block";
-        document.getElementById("numOfElevators").style.display = "block";
-        document.getElementById("numOfCorporations").style.display = "none";
-        document.getElementById("maxOccupancy").style.display = "none";
-        document.getElementById("businessHours").style.display = "none";
-        document.getElementById("numOfApartments").style.display = "none";
+        numOfFloors.style.display = "block";
+        numOfBasements.style.display = "block";
+        numOfCompanies.style.display = "block";
+        numOfParking.style.display = "block";
+        numOfElevators.style.display = "block";
+        numOfCorporations.style.display = "none";
+        maxOccupancy.style.display = "none";
+        businessHours.style.display = "none";
+        numOfApartments.style.display = "none";
     }
     else if (SelectedValue == "corporate") {
-        document.getElementById("numOfFloors").style.display = "block";
-        document.getElementById("numOfBasements").style.display = "block";
-        document.getElementById("numOfParking").style.display = "block";
-        document.getElementById("numOfCorporations").style.display = "block";
-        document.getElementById("maxOccupancy").style.display = "block";
-        document.getElementById("numOfCompanies").style.display = "none";
-        document.getElementById("numOfElevators").style.display = "none";
-        document.getElementById("businessHours").style.display = "none";
-        document.getElementById("numOfApartments").style.display = "none";
+        numOfFloors.style.display = "block";
+        numOfBasements.style.display = "block";
+        numOfParking.style.display = "block";
+        numOfCorporations.style.display = "block";
+        maxOccupancy.style.display = "block";
+        numOfCompanies.style.display = "none";
+        numOfElevators.style.display = "none";
+        businessHours.style.display = "none";
+        numOfApartments.style.display = "none";
     }
     else if (SelectedValue = "hybrid") {
-        document.getElementById("numOfFloors").style.display = "block";
-        document.getElementById("numOfBasements").style.display = "block";
-        document.getElementById("numOfCompanies").style.display = "block";
-        document.getElementById("numOfParking").style.display = "block";
-        document.getElementById("maxOccupancy").style.display = "block";
-        document.getElementById("businessHours").style.display = "block";
-        document.getElementById("numOfCorporations").style.display = "none";
-        document.getElementById("numOfElevators").style.display = "none";
-        document.getElementById("numOfApartments").style.display = "none";
+        numOfFloors.style.display = "block";
+        numOfBasements.style.display = "block";
+        numOfCompanies.style.display = "block";
+        numOfParking.style.display = "block";
+        maxOccupancy.style.display = "block";
+        businessHours.style.display = "block";
+        numOfCorporations.style.display = "none";
+        numOfElevators.style.display = "none";
+        numOfApartments.style.display = "none";
     }
 }
 
+
+radioButtons.addEventListener("click", (event) => {
+    if (event.target.type == "radio"){
+        
+    }
+})
+
+clickBtn.addEventListener("click", () => {
+  elevatorsNeeded.value = numOfElevatorsInput.value;
+})
+
+function calculate(){
+    let numElevators = 0;
+    (buildingType.value == commercial);{
+        return parseInt(numOfElevatorsInput.value);
+    }
+}
+
+// function averageApartmentPerFloor(){
+//     console.log("numberOfApartments / numberOfFloors");
+// }
+
+// // clickBtn.addEventListener('click', (event) => {
+// //     addOnePlusOne();
+// // // })
